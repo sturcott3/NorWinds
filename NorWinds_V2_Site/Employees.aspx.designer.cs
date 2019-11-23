@@ -11,7 +11,7 @@ namespace NorWinds_V2_Site
 {
 
 
-    public partial class Contact
+    public partial class Employees
     {
     }
 }
