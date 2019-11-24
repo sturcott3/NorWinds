@@ -10,33 +10,42 @@
 namespace NorWinds_V2_Site {
     
     
-    public partial class About {
+    public partial class Contact {
         
         /// <summary>
-        /// txtShipDate control.
+        /// lsvCategories control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtShipDate;
+        protected global::System.Web.UI.WebControls.ListView lsvCategories;
         
         /// <summary>
-        /// calShipDate control.
+        /// CatObjDataSrc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.CalendarExtender calShipDate;
+        protected global::System.Web.UI.WebControls.ObjectDataSource CatObjDataSrc;
         
         /// <summary>
-        /// lblArrivalDate control.
+        /// lsvProducts control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblArrivalDate;
+        protected global::System.Web.UI.WebControls.ListView lsvProducts;
+        
+        /// <summary>
+        /// ProdObjDataSrc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource ProdObjDataSrc;
     }
 }

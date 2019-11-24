@@ -50,7 +50,7 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/Shop">Shop</a></li>
+                        <li><a runat="server" href="~/ShopCategory">Shop</a></li>
                         <li><a runat="server" href="~/Cart">Cart</a></li>
                         <li><a runat="server" href="~/Employees">Employees</a></li>
                         <li><a runat="server" href="~/Admins">Admins</a></li>
