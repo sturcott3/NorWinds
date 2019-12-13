@@ -13,31 +13,22 @@ namespace NorWinds_V2_Site {
     public partial class ProductDetails {
         
         /// <summary>
-        /// lblDebug1 control.
+        /// lsvNavCategories control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDebug1;
+        protected global::System.Web.UI.WebControls.ListView lsvNavCategories;
         
         /// <summary>
-        /// lblDebug2 control.
+        /// CatObjDataSrc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDebug2;
-        
-        /// <summary>
-        /// lblDebug3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDebug3;
+        protected global::System.Web.UI.WebControls.ObjectDataSource CatObjDataSrc;
         
         /// <summary>
         /// lsvProdDetails control.
@@ -49,13 +40,13 @@ namespace NorWinds_V2_Site {
         protected global::System.Web.UI.WebControls.ListView lsvProdDetails;
         
         /// <summary>
-        /// ProductObjDataSrc control.
+        /// lblItemAdded control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource ProductObjDataSrc;
+        protected global::System.Web.UI.WebControls.Label lblItemAdded;
         
         /// <summary>
         /// cbxQuantity control.

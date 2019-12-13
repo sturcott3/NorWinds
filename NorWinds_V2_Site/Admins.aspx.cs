@@ -13,5 +13,19 @@ namespace NorWinds_V2_Site
         {
 
         }
+
+        protected void btnGetCustOrders_Click(object sender, EventArgs e)
+        {
+            NorwinDBTableAdapters.OrdersTableAdapter orders = new NorwinDBTableAdapters.OrdersTableAdapter();
+            lsvOrders.DataSource = orders.GetOrdersByCustID(cbxCustomer.SelectedValue);
+            lsvOrders.DataBind();
+        }
+
+        protected void btnGetDateOrders_Click(object sender, EventArgs e)
+        {
+            NorwinDBTableAdapters.OrdersTableAdapter orders = new NorwinDBTableAdapters.OrdersTableAdapter();
+            lsvOrders.DataSource = orders.GetOrdersByRequiredDate(DateTime.Parse(cbxDate.SelectedValue));
+            lsvOrders.DataBind();
+        }
     }
 }

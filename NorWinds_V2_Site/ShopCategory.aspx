@@ -45,20 +45,11 @@
     <br />
     <br />
 
-    <%-- 
-            ProductID: <%# Eval("ProductID") %>
-            SupplierID: <%# Eval("SupplierID") %>
-            CategoryID: <%# Eval("CategoryID") %>
-            UnitsOnOrder: <%# Eval("UnitsOnOrder") %>
-            ReorderLevel: <%# Eval("ReorderLevel") %>
-            Discontinued: <%# Eval("Discontinued") %>
-    --%>
-
     <asp:ListView ID="lsvProducts" runat="server" DataKeyNames="ProductID" DataSourceID="ProdObjDataSrc">
 
         <EmptyDataTemplate>
             <span>
-                <h3>Please begin by choosing a Category</h3>
+                <h4>Please begin by choosing a Category</h4>
             </span>
         </EmptyDataTemplate>
 

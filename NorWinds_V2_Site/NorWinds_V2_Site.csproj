@@ -177,6 +177,8 @@
     <Content Include="Content\northwind-custom-styles.css" />
     <Content Include="Employees.aspx" />
     <Content Include="images\northWind.png" />
+    <Content Include="OrderDetails.aspx" />
+    <Content Include="PendingOrders.aspx" />
     <Content Include="ProductDetails.aspx" />
     <Content Include="ShopCategory.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -208,6 +210,7 @@
     <Content Include="NorwinDB.xss">
       <DependentUpon>NorwinDB.xsd</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -382,6 +385,20 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>NorwinDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDetails.aspx.cs">
+      <DependentUpon>OrderDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderDetails.aspx.designer.cs">
+      <DependentUpon>OrderDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PendingOrders.aspx.cs">
+      <DependentUpon>PendingOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PendingOrders.aspx.designer.cs">
+      <DependentUpon>PendingOrders.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProductDetails.aspx.cs">
       <DependentUpon>ProductDetails.aspx</DependentUpon>

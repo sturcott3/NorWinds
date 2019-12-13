@@ -3,26 +3,62 @@
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+   
     <style>
         .validator-message {
             color: red;
             font-style: italic;
         }
     </style>
+
     <br />
+    <h3><%:Title %>: </h3>
     <br />
-    <%-- <TEMP> --%>
-    <asp:Label ID="lblDebug1" runat="server" Text="..."></asp:Label>
-    <br />
-    <asp:Label ID="lblDebug2" runat="server" Text="..."></asp:Label>
-    <br />
-    <asp:Label ID="lblDebug3" runat="server" Text="..."></asp:Label>
-    <br />
-    <br />
-    <%-- </TEMP> --%>
 
 
-    <asp:ListView ID="lsvProdDetails" runat="server" DataKeyNames="ProductID" DataSourceID="ProductObjDataSrc">
+   <asp:ListView ID="lsvNavCategories" class="center-block" runat="server" DataKeyNames="CategoryID" DataSourceID="CatObjDataSrc">
+        
+       <ItemTemplate>
+            <td runat="server" style="">
+                <a href="ShopCategory.aspx?CatID=<%# Eval("CategoryID") %>">
+                    <asp:Label ID="CategoryNameLabel" runat="server" Text='<%# Eval("CategoryName") %>' />
+                </a>
+            </td>
+        </ItemTemplate>
+
+        <ItemSeparatorTemplate>
+            <td runat="server" class="separator">&nbsp;&nbsp; | &nbsp;&nbsp;
+            </td>
+        </ItemSeparatorTemplate>
+
+        <LayoutTemplate>
+            <table runat="server" border="0" style="">
+                <tr id="itemPlaceholderContainer" runat="server">
+                    <td id="itemPlaceholder" runat="server"></td>
+                </tr>
+            </table>
+            <div style="">
+            </div>
+        </LayoutTemplate>
+    </asp:ListView>
+
+    <asp:ObjectDataSource ID="CatObjDataSrc" runat="server" DeleteMethod="Delete" InsertMethod="Insert" OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="NorWinds_V2_Site.NorwinDBTableAdapters.CategoriesTableAdapter" UpdateMethod="Update">
+        <DeleteParameters>
+            <asp:Parameter Name="Original_CategoryID" Type="Int32" />
+        </DeleteParameters>
+        <InsertParameters>
+            <asp:Parameter Name="CategoryName" Type="String" />
+        </InsertParameters>
+        <UpdateParameters>
+            <asp:Parameter Name="CategoryName" Type="String" />
+            <asp:Parameter Name="Original_CategoryID" Type="Int32" />
+        </UpdateParameters>
+    </asp:ObjectDataSource>
+
+    <br />
+    <br />
+
+    <asp:ListView ID="lsvProdDetails" runat="server" DataKeyNames="ProductID">
 
         <EmptyDataTemplate>
             <span>
@@ -55,42 +91,13 @@
             <div style="">
             </div>
         </LayoutTemplate>
-
     </asp:ListView>
 
-    <asp:ObjectDataSource ID="ProductObjDataSrc" runat="server" DeleteMethod="Delete" InsertMethod="Insert" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataByProdID" TypeName="NorWinds_V2_Site.NorwinDBTableAdapters.ProductsTableAdapter" UpdateMethod="Update">
-        <DeleteParameters>
-            <asp:Parameter Name="Original_ProductID" Type="Int32" />
-        </DeleteParameters>
-        <InsertParameters>
-            <asp:Parameter Name="ProductName" Type="String" />
-            <asp:Parameter Name="SupplierID" Type="Int32" />
-            <asp:Parameter Name="CategoryID" Type="Int32" />
-            <asp:Parameter Name="QuantityPerUnit" Type="String" />
-            <asp:Parameter Name="UnitPrice" Type="Decimal" />
-            <asp:Parameter Name="UnitsInStock" Type="Int16" />
-            <asp:Parameter Name="UnitsOnOrder" Type="Int16" />
-            <asp:Parameter Name="ReorderLevel" Type="Int16" />
-            <asp:Parameter Name="Discontinued" Type="Boolean" />
-        </InsertParameters>
-        <SelectParameters>
-            <asp:QueryStringParameter Name="ProdID" QueryStringField="ProdID" Type="Int32" />
-        </SelectParameters>
-        <UpdateParameters>
-            <asp:Parameter Name="ProductName" Type="String" />
-            <asp:Parameter Name="SupplierID" Type="Int32" />
-            <asp:Parameter Name="CategoryID" Type="Int32" />
-            <asp:Parameter Name="QuantityPerUnit" Type="String" />
-            <asp:Parameter Name="UnitPrice" Type="Decimal" />
-            <asp:Parameter Name="UnitsInStock" Type="Int16" />
-            <asp:Parameter Name="UnitsOnOrder" Type="Int16" />
-            <asp:Parameter Name="ReorderLevel" Type="Int16" />
-            <asp:Parameter Name="Discontinued" Type="Boolean" />
-            <asp:Parameter Name="Original_ProductID" Type="Int32" />
-        </UpdateParameters>
-    </asp:ObjectDataSource>
-
     <div class="container-fluid ">
+        <br />
+        <br />
+        <asp:Label ID="lblItemAdded" runat="server" Text="..."></asp:Label>
+
         <br />
         <br />
         <div class="row">
@@ -98,19 +105,19 @@
                 Quantity:&nbsp;&nbsp;
                 <ajaxToolkit:ComboBox ID="cbxQuantity" runat="server" Width="25px">
                     <asp:ListItem Value="0">...</asp:ListItem>
-                    <asp:ListItem>1</asp:ListItem>
-                    <asp:ListItem>2</asp:ListItem>
-                    <asp:ListItem>3</asp:ListItem>
-                    <asp:ListItem>4</asp:ListItem>
-                    <asp:ListItem>5</asp:ListItem>
-                    <asp:ListItem>10</asp:ListItem>
-                    <asp:ListItem>20</asp:ListItem>
+                    <asp:ListItem Value="1">1</asp:ListItem>
+                    <asp:ListItem Value="2">2</asp:ListItem>
+                    <asp:ListItem Value="3">3</asp:ListItem>
+                    <asp:ListItem Value="4">4</asp:ListItem>
+                    <asp:ListItem Value="5">5</asp:ListItem>
+                    <asp:ListItem Value="10">10</asp:ListItem>
+                    <asp:ListItem Value="20">20</asp:ListItem>
                 </ajaxToolkit:ComboBox>
-                <asp:RangeValidator ID="vldQuantity" runat="server" Text="*   Not enough units in stock." ControlToValidate="cbxQuantity" MinimumValue="1" MaximumValue='99' CssClass="validator-message"> </asp:RangeValidator>
+                <asp:RangeValidator ID="vldQuantity" runat="server" Text="* Not enough units in stock." ControlToValidate="cbxQuantity" MinimumValue="1" MaximumValue='99' CssClass="validator-message" Type="Integer"></asp:RangeValidator>
             </div>
 
             <div class="col-lg-2 col-md-3 col-xs-6">
-                <asp:Button ID="btnAddToCart" runat="server" Text="Add to Cart" />
+                <asp:Button ID="btnAddToCart" runat="server" Text="Add to Cart" OnClick="btnAddToCart_Click" />
             </div>
         </div>
 
