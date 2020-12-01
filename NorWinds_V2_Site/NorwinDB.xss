@@ -8,7 +8,7 @@
   <Shapes>
     <Shape ID="DesignTable:Categories" ZOrder="11" X="58" Y="36" Height="115" Width="206" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:Products" ZOrder="9" X="429" Y="36" Height="438" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="216" />
-    <Shape ID="DesignTable:Cart" ZOrder="8" X="57" Y="178" Height="267" Width="313" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="178" />
+    <Shape ID="DesignTable:Cart" ZOrder="8" X="57" Y="178" Height="305" Width="313" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="178" />
     <Shape ID="DesignTable:Orders" ZOrder="4" X="409" Y="511" Height="324" Width="183" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
     <Shape ID="DesignTable:Order Details" ZOrder="1" X="752" Y="612" Height="210" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="140" />
     <Shape ID="DesignTable:OrderDetailView" ZOrder="5" X="786" Y="68" Height="168" Width="239" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="117" />
