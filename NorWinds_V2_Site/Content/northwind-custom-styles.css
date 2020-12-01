@@ -1,8 +1,9 @@
 ﻿#master-body{
     background-color: #bab7b7;
 }
-#home-banner {
-    height:100px;
-    width:100%;
-    background-color: #bab7b7;
+
+.altPendingBlock {
+    background-color:azure;
+    padding:5px;
 }
+

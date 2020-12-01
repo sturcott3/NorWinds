@@ -10,96 +10,69 @@
 namespace NorWinds_V2_Site {
     
     
-    public partial class Cart {
+    public partial class ProductDetails {
         
         /// <summary>
-        /// lblInitMessage control.
+        /// lsvNavCategories control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblInitMessage;
+        protected global::System.Web.UI.WebControls.ListView lsvNavCategories;
         
         /// <summary>
-        /// lblMessage control.
+        /// CatObjDataSrc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMessage;
+        protected global::System.Web.UI.WebControls.ObjectDataSource CatObjDataSrc;
         
         /// <summary>
-        /// lsvCart control.
+        /// lsvProdDetails control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView lsvCart;
+        protected global::System.Web.UI.WebControls.ListView lsvProdDetails;
         
         /// <summary>
-        /// txtShipDate control.
+        /// lblItemAdded control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtShipDate;
+        protected global::System.Web.UI.WebControls.Label lblItemAdded;
         
         /// <summary>
-        /// calShipDate control.
+        /// cbxQuantity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.CalendarExtender calShipDate;
+        protected global::AjaxControlToolkit.ComboBox cbxQuantity;
         
         /// <summary>
-        /// btnCheckShip control.
+        /// vldQuantity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCheckShip;
+        protected global::System.Web.UI.WebControls.RangeValidator vldQuantity;
         
         /// <summary>
-        /// RequiredFieldValidator1 control.
+        /// btnAddToCart control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
-        
-        /// <summary>
-        /// lblArrivalDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblArrivalDate;
-        
-        /// <summary>
-        /// btnConfirmOrder control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnConfirmOrder;
-        
-        /// <summary>
-        /// ConfirmButtonExtender1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.ConfirmButtonExtender ConfirmButtonExtender1;
+        protected global::System.Web.UI.WebControls.Button btnAddToCart;
     }
 }
